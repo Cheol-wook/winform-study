@@ -45,7 +45,7 @@ namespace winform_test
             this.txtDoor = new System.Windows.Forms.TextBox();
             this.Save = new System.Windows.Forms.Button();
             this.Modify = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Qual_Search = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -182,13 +182,13 @@ namespace winform_test
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(250, 229);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "조건검색";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.Qual_Search.Location = new System.Drawing.Point(250, 229);
+            this.Qual_Search.Name = "button3";
+            this.Qual_Search.Size = new System.Drawing.Size(75, 23);
+            this.Qual_Search.TabIndex = 11;
+            this.Qual_Search.Text = "조건검색";
+            this.Qual_Search.UseVisualStyleBackColor = true;
+            this.Qual_Search.Click += new System.EventHandler(this.Qual_Search_Click);
             // 
             // button4
             // 
@@ -206,7 +206,7 @@ namespace winform_test
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(351, 285);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.Qual_Search);
             this.Controls.Add(this.Modify);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.txtDoor);
@@ -239,7 +239,7 @@ namespace winform_test
         private System.Windows.Forms.TextBox txtDoor;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button Modify;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Qual_Search;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ColumnHeader 번호;
         private System.Windows.Forms.ColumnHeader 이름;

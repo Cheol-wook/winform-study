@@ -115,6 +115,44 @@ namespace winform_test
             }
         }
 
+        //조건검색 버튼
+        private void Qual_Search_Click(object sender, EventArgs e)
+        {
+            listView1.BeginUpdate();
+            listView1.Items.Clear();
+            ListViewItem item;
+            string Conditional = "";
+
+            if (this.txtName.Text != "")
+                Conditional += " or carName = '" + this.txtName.Text + "'";
+            if (this.txtYear.Text != "")
+                Conditional += " or carYear = '" + this.txtYear.Text + "'";
+            if (this.txtPrice.Text != "")
+                Conditional += " or carPrice = '" + this.txtPrice.Text + "'";
+            if (this.txtDoor.Text != "")
+                Conditional += " or carDoor = '" + this.txtDoor.Text + "'";
+
+            SqlConnection Conn = new SqlConnection(Constr);
+            Conn.Open();
+
+            SqlCommand Command = new SqlCommand("SELECT * FROM TB_CAR_INFO WHERE 1=0" + Conditional, Conn);
+
+            var Read = Command.ExecuteReader();
+            while (Read.Read())
+            {
+                item = new ListViewItem(Read[0].ToString());
+                item.SubItems.Add(Read[1].ToString());
+                item.SubItems.Add(Read[2].ToString());
+                item.SubItems.Add(Read[3].ToString());
+                item.SubItems.Add(Read[4].ToString());
+
+                listView1.Items.Add(item);
+            }
+            listView1.EndUpdate();
+            Conn.Close();
+        }
+
+
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -126,11 +164,6 @@ namespace winform_test
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
         {
 
         }
