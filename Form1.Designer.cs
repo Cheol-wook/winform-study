@@ -30,6 +30,11 @@ namespace winform_test
         private void InitializeComponent()
         {
             this.listView1 = new System.Windows.Forms.ListView();
+            this.번호 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.이름 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.년식 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.가격 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.도어 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,11 +47,6 @@ namespace winform_test
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.번호 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.이름 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.년식 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.가격 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.도어 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1
@@ -64,6 +64,35 @@ namespace winform_test
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // 번호
+            // 
+            this.번호.Text = "번호";
+            this.번호.Width = 41;
+            // 
+            // 이름
+            // 
+            this.이름.Text = "이름";
+            this.이름.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.이름.Width = 81;
+            // 
+            // 년식
+            // 
+            this.년식.Text = "년식";
+            this.년식.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.년식.Width = 54;
+            // 
+            // 가격
+            // 
+            this.가격.Text = "가격";
+            this.가격.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.가격.Width = 93;
+            // 
+            // 도어
+            // 
+            this.도어.Text = "도어";
+            this.도어.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.도어.Width = 43;
             // 
             // label1
             // 
@@ -138,6 +167,7 @@ namespace winform_test
             this.button1.TabIndex = 9;
             this.button1.Text = "저 장";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -166,35 +196,7 @@ namespace winform_test
             this.button4.TabIndex = 12;
             this.button4.Text = "전체검색";
             this.button4.UseVisualStyleBackColor = true;
-            // 
-            // 번호
-            // 
-            this.번호.Text = "번호";
-            this.번호.Width = 41;
-            // 
-            // 이름
-            // 
-            this.이름.Text = "이름";
-            this.이름.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.이름.Width = 81;
-            // 
-            // 년식
-            // 
-            this.년식.Text = "년식";
-            this.년식.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.년식.Width = 54;
-            // 
-            // 가격
-            // 
-            this.가격.Text = "가격";
-            this.가격.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.가격.Width = 93;
-            // 
-            // 도어
-            // 
-            this.도어.Text = "도어";
-            this.도어.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.도어.Width = 43;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
@@ -216,6 +218,7 @@ namespace winform_test
             this.Controls.Add(this.listView1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
