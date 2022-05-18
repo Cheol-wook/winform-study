@@ -44,7 +44,7 @@ namespace winform_test
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtDoor = new System.Windows.Forms.TextBox();
             this.Save = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Modify = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -172,13 +172,13 @@ namespace winform_test
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(250, 204);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "수 정";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Modify.Location = new System.Drawing.Point(250, 204);
+            this.Modify.Name = "button2";
+            this.Modify.Size = new System.Drawing.Size(75, 23);
+            this.Modify.TabIndex = 10;
+            this.Modify.Text = "수 정";
+            this.Modify.UseVisualStyleBackColor = true;
+            this.Modify.Click += new System.EventHandler(this.Modify_Click);
             // 
             // button3
             // 
@@ -206,7 +206,7 @@ namespace winform_test
             this.ClientSize = new System.Drawing.Size(351, 285);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Modify);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.txtDoor);
             this.Controls.Add(this.txtPrice);
@@ -237,7 +237,7 @@ namespace winform_test
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtDoor;
         private System.Windows.Forms.Button Save;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Modify;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ColumnHeader 번호;

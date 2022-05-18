@@ -80,12 +80,40 @@ namespace winform_test
             LoadAllData();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void Modify_Click(object sender, EventArgs e)
         {
 
+            if (listView1.SelectedItems.Count > 0)
+            {
+                int SelectRow = listView1.SelectedItems[0].Index;
+
+                string Search_Conditional = listView1.Items[SelectRow].SubItems[0].Text;
+
+                string Set_Conditional = "";
+                Set_Conditional += "carName = '" + txtName.Text + "', ";
+                Set_Conditional += "carYear = '" + txtYear.Text + "', ";
+                Set_Conditional += "carPrice = '" + txtPrice.Text + "', ";
+                Set_Conditional += "carDoor = '" + txtDoor.Text + "'";
+
+                SqlConnection Conn = new SqlConnection(Constr);
+                Conn.Open();
+                SqlCommand Command = new SqlCommand("UPDATE TB_CAR_INFO SET " + Set_Conditional +
+                    " WHERE id = " + Search_Conditional, Conn);
+                Command.ExecuteNonQuery();
+                Conn.Close();
+
+                listView1.Items[SelectRow].SubItems[1].Text = txtName.Text;
+                listView1.Items[SelectRow].SubItems[2].Text = txtYear.Text;
+                listView1.Items[SelectRow].SubItems[3].Text = txtPrice.Text;
+                listView1.Items[SelectRow].SubItems[4].Text = txtDoor.Text;
+
+                listView1.Update();
+
+                MessageBox.Show("정상적으로 데이터가 수정되었습니다.");
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
