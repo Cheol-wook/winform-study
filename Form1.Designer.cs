@@ -46,7 +46,7 @@ namespace winform_test
             this.Save = new System.Windows.Forms.Button();
             this.Modify = new System.Windows.Forms.Button();
             this.Qual_Search = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.AllSearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -192,20 +192,20 @@ namespace winform_test
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(250, 253);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "전체검색";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.AllSearch.Location = new System.Drawing.Point(250, 253);
+            this.AllSearch.Name = "button4";
+            this.AllSearch.Size = new System.Drawing.Size(75, 23);
+            this.AllSearch.TabIndex = 12;
+            this.AllSearch.Text = "전체검색";
+            this.AllSearch.UseVisualStyleBackColor = true;
+            this.AllSearch.Click += new System.EventHandler(this.AllSearch_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(351, 285);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.AllSearch);
             this.Controls.Add(this.Qual_Search);
             this.Controls.Add(this.Modify);
             this.Controls.Add(this.Save);
@@ -240,7 +240,7 @@ namespace winform_test
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button Modify;
         private System.Windows.Forms.Button Qual_Search;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button AllSearch;
         private System.Windows.Forms.ColumnHeader 번호;
         private System.Windows.Forms.ColumnHeader 이름;
         private System.Windows.Forms.ColumnHeader 년식;

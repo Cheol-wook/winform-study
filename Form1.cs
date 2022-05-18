@@ -68,7 +68,7 @@ namespace winform_test
             string Conditional = "(";
             Conditional += "'" + this.txtName.Text + "', ";
             Conditional += "'" + this.txtYear.Text + "', ";
-            Conditional += this.txtPrice.Text + "', ";
+            Conditional += this.txtPrice.Text + ", ";
             Conditional += this.txtDoor + ")";
 
             SqlConnection con = new SqlConnection(Constr);
@@ -152,13 +152,44 @@ namespace winform_test
             Conn.Close();
         }
 
-
-        private void label3_Click(object sender, EventArgs e)
+        //전체검색 버튼
+        private void AllSearch_Click(object sender, EventArgs e)
         {
+            txt_reset();
+            listView1.BeginUpdate();
+            listView1.Items.Clear();
+            ListViewItem item;
 
+            SqlConnection Conn = new SqlConnection(Constr);
+            Conn.Open();
+
+            SqlCommand Command = new SqlCommand("SELECT * FROM TB_CAR_INFO", Conn);
+
+            var Read = Command.ExecuteReader();
+            while (Read.Read())
+            {
+                item = new ListViewItem(Read[0].ToString());
+                item.SubItems.Add(Read[1].ToString());
+                item.SubItems.Add(Read[2].ToString());
+                item.SubItems.Add(Read[3].ToString());
+                item.SubItems.Add(Read[4].ToString());
+
+                listView1.Items.Add(item);
+            }
+            listView1.EndUpdate();
+            Conn.Close();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        //텍스트 초기화
+        private void txt_reset()
+        {
+            this.txtName.Text = "";
+            this.txtYear.Text = "";
+            this.txtPrice.Text = "";
+            this.txtDoor.Text = "";
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
