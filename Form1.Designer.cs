@@ -39,11 +39,11 @@ namespace winform_test
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtYear = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtDoor = new System.Windows.Forms.TextBox();
+            this.Save = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -131,43 +131,44 @@ namespace winform_test
             this.label4.TabIndex = 4;
             this.label4.Text = "도 어";
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(56, 180);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(85, 21);
-            this.textBox1.TabIndex = 5;
+            this.txtName.Location = new System.Drawing.Point(56, 180);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(85, 21);
+            this.txtName.TabIndex = 5;
             // 
-            // textBox2
+            // txtYear
             // 
-            this.textBox2.Location = new System.Drawing.Point(56, 206);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(85, 21);
-            this.textBox2.TabIndex = 6;
+            this.txtYear.Location = new System.Drawing.Point(56, 206);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(85, 21);
+            this.txtYear.TabIndex = 6;
             // 
-            // textBox3
+            // txtPrice
             // 
-            this.textBox3.Location = new System.Drawing.Point(56, 231);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(85, 21);
-            this.textBox3.TabIndex = 7;
+            this.txtPrice.Location = new System.Drawing.Point(56, 231);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(85, 21);
+            this.txtPrice.TabIndex = 7;
+            this.txtPrice.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox4
+            // txtDoor
             // 
-            this.textBox4.Location = new System.Drawing.Point(56, 255);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(85, 21);
-            this.textBox4.TabIndex = 8;
+            this.txtDoor.Location = new System.Drawing.Point(56, 255);
+            this.txtDoor.Name = "txtDoor";
+            this.txtDoor.Size = new System.Drawing.Size(85, 21);
+            this.txtDoor.TabIndex = 8;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(250, 178);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "저 장";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Save.Location = new System.Drawing.Point(250, 178);
+            this.Save.Name = "button1";
+            this.Save.Size = new System.Drawing.Size(75, 23);
+            this.Save.TabIndex = 9;
+            this.Save.Text = "저 장";
+            this.Save.UseVisualStyleBackColor = true;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // button2
             // 
@@ -206,11 +207,11 @@ namespace winform_test
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Save);
+            this.Controls.Add(this.txtDoor);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.txtYear);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -231,11 +232,11 @@ namespace winform_test
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtYear;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtDoor;
+        private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;

@@ -40,7 +40,7 @@ namespace winform_test
 
             SqlCommand command = new SqlCommand("SELECT * FROM TB_CAR_INFO", con);
 
-            var Read = command.ExecuteReader();
+            var Read = command.ExecuteReader();     //다중 레코드 반환 (한 개 이상의 레코드)
             while (Read.Read())
             {
                 item = new ListViewItem(Read[0].ToString());
@@ -55,7 +55,47 @@ namespace winform_test
             con.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Save_Click(object sender, EventArgs e)
+        {
+            //오류검출
+            if(this.txtName.Text == "" | this.txtYear.Text == "" | this.txtPrice.Text == "" | this.txtDoor.Text == "")
+            {
+                MessageBox.Show("입력되지 않은 정보가 있습니다.");
+                return;
+            }
+
+            string Conditional = "(";
+            Conditional += "'" + this.txtName.Text + "', ";
+            Conditional += "'" + this.txtYear.Text + "', ";
+            Conditional += this.txtPrice.Text + "', ";
+            Conditional += this.txtDoor + ")";
+
+            SqlConnection con = new SqlConnection(Constr);
+            con.Open();
+            SqlCommand command = new SqlCommand("INSERT INTO TB_CAR_INFO VALUES" + Conditional, con);
+            command.ExecuteNonQuery();      //반환값이 없는 (영향 받은 레코드 수만 반환) 명령어 실행
+            con.Close();
+
+            MessageBox.Show("정상적으로 데이터가 저장되었습니다.");
+            LoadAllData();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
