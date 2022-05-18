@@ -55,6 +55,7 @@ namespace winform_test
             con.Close();
         }
 
+        //저장 버튼
         private void Save_Click(object sender, EventArgs e)
         {
             //오류검출
@@ -80,6 +81,7 @@ namespace winform_test
             LoadAllData();
         }
 
+        //수정 버튼
         private void Modify_Click(object sender, EventArgs e)
         {
 
@@ -124,6 +126,11 @@ namespace winform_test
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }

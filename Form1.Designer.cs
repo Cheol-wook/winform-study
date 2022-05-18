@@ -160,20 +160,20 @@ namespace winform_test
             this.txtDoor.Size = new System.Drawing.Size(85, 21);
             this.txtDoor.TabIndex = 8;
             // 
-            // button1
+            // Save
             // 
             this.Save.Location = new System.Drawing.Point(250, 178);
-            this.Save.Name = "button1";
+            this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(75, 23);
             this.Save.TabIndex = 9;
             this.Save.Text = "저 장";
             this.Save.UseVisualStyleBackColor = true;
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
-            // button2
+            // Modify
             // 
             this.Modify.Location = new System.Drawing.Point(250, 204);
-            this.Modify.Name = "button2";
+            this.Modify.Name = "Modify";
             this.Modify.Size = new System.Drawing.Size(75, 23);
             this.Modify.TabIndex = 10;
             this.Modify.Text = "수 정";
@@ -188,6 +188,7 @@ namespace winform_test
             this.button3.TabIndex = 11;
             this.button3.Text = "조건검색";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
